@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="joml" default="dist" basedir=".">
+    <property name="commit.message" value="Commit message"/>
+    <property name="plugin.main.version" value="10580"/>
+    <property file="${basedir}/gradle.properties"/>
+    <!-- ** include targets that all plugins have in common ** -->
+    <import file="../build-common.xml"/>
+</project>
