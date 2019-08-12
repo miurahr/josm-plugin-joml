@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="joml" default="dist" basedir=".">
+    <property name="plugin.src.dir" value="src/main/java"/>
+    <property name="plugin.resources.dir" value="src/main/resources"/>
     <property name="commit.message" value="Commit message"/>
-    <property name="plugin.main.version" value="10580"/>
     <property file="${basedir}/gradle.properties"/>
     <!-- ** include targets that all plugins have in common ** -->
     <import file="../build-common.xml"/>
+    <!-- Override the `setup-dist-default` task from build-common.xml -->
+    <target name="setup-dist-default">
+        <copy todir="${plugin.build.dir}" failonerror="no" includeemptydirs="no">
+            <fileset dir="${plugin.resources.dir}"/>
+        </copy>
+        <copy todir="${plugin.build.dir}">
+          <fileset dir=".">
+            <include name="LICENSE*"/>
+            <include name="README.md"/>
+          </fileset>
+        </copy>
+    </target>
 </project>
