@@ -1,6 +1,6 @@
 README 
 ======
 This plugin provides the JOML library for JOSM plugins.
-    * Licensed under MIT (see LICENSE)
+    * Licensed under GPL (see LICENSE)
 
 The current embedded version of JOML is 1.9.9.
